@@ -7,6 +7,7 @@ delete from member_playlist;
 delete from member_playlist_detail;
 delete from `member_play_history`;
 delete from music;
+delete from album;
 
 
 
@@ -247,5 +248,29 @@ INSERT INTO `music` (`music_title`, `lyrics`, `music_file_url`, `playtime`, `lik
 ('J-Pop Dream', 'Lyrics of dream...', 'http://example.com/music38.mp3', 230, 110, 0, 19, 'j-pop'),
 ('Dance Magic', 'Lyrics of magic...', 'http://example.com/music39.mp3', 215, 220, 0, 20, 'dance'),
 ('Ballad Heart', 'Lyrics of heart...', 'http://example.com/music40.mp3', 330, 170, 0, 20, 'ballad');
+
+
+INSERT INTO album (album_title, music_count, release_date, album_art_image_url, del_yn, distributor_id) VALUES
+('Greatest Hits', 2, '2023-01-01 10:00:00', 'http://example.com/art1.jpg', 0, 1),
+('Love Songs', 3, '2023-02-01 11:00:00', 'http://example.com/art2.jpg', 0, 2),
+('Dance Party', 4, '2023-03-01 12:00:00', 'http://example.com/art3.jpg', 0, 3),
+('Rock Anthems', 2, '2023-04-01 13:00:00', 'http://example.com/art4.jpg', 0, 4),
+('Hip-Hop Beats', 4, '2023-05-01 14:00:00', 'http://example.com/art5.jpg', 0, 5),
+('Chill Vibes', 3, '2023-06-01 15:00:00', 'http://example.com/art6.jpg', 0, 1),
+('Acoustic Favorites', 2, '2023-07-01 16:00:00', 'http://example.com/art7.jpg', 0, 2),
+('Pop Essentials', 4, '2023-08-01 17:00:00', 'http://example.com/art8.jpg', 0, 3),
+('Classic Rock', 3, '2023-09-01 18:00:00', 'http://example.com/art9.jpg', 0, 4),
+('Electronic Beats', 2, '2023-10-01 19:00:00', 'http://example.com/art10.jpg', 0, 5),
+('Jazz Collection', 3, '2023-11-01 20:00:00', 'http://example.com/art11.jpg', 0, 1),
+('Country Roads', 2, '2023-12-01 21:00:00', 'http://example.com/art12.jpg', 0, 2),
+('Indie Playlist', 4, '2023-01-15 10:00:00', 'http://example.com/art13.jpg', 0, 3),
+('Metal Madness', 2, '2023-02-15 11:00:00', 'http://example.com/art14.jpg', 0, 4),
+('R&B Vibes', 4, '2023-03-15 12:00:00', 'http://example.com/art15.jpg', 0, 5),
+('Reggae Rhythms', 3, '2023-04-15 13:00:00', 'http://example.com/art16.jpg', 0, 1),
+('Soul Classics', 2, '2023-05-15 14:00:00', 'http://example.com/art17.jpg', 0, 2),
+('Blues Legends', 3, '2023-06-15 15:00:00', 'http://example.com/art18.jpg', 0, 3),
+('Latin Hits', 4, '2023-07-15 16:00:00', 'http://example.com/art19.jpg', 0, 4),
+('World Music', 2, '2023-08-15 17:00:00', 'http://example.com/art20.jpg', 0, 5);
 SET foreign_key_checks = 1;
+
 
