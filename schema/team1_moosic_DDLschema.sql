@@ -1,4 +1,4 @@
-# create database team1_moosic;
+create database team1_moosic;
 use team1_moosic;
 
 SET foreign_key_checks = 0;
@@ -165,7 +165,7 @@ CREATE TABLE `member` (
 	`member_email` varchar(100) NOT NULL unique,
 	`password` varchar(30) NOT NULL,
 	`phonenum` varchar(20) NOT NULL unique,
-	`birthdate` timestamp NOT NULL,
+	`birthdate` date NOT NULL,
 	`gender` varchar(10) NOT NULL,
 	`account_id` varchar(100) NULL,
 	`member_profile_image_url` varchar(2083) NULL,
@@ -185,8 +185,5 @@ CREATE TABLE `artist` (
 	`artist_profile_image_url` varchar(2083) NULL,
     PRIMARY KEY (`artist_id`)
 );
-
-
-
 
 SET foreign_key_checks = 1;
