@@ -1,4 +1,16 @@
+delete from `member`;
+delete from `artist`;
+delete from album_distributor;
+delete from member_payment_method;
+delete from member_payment_history;
+delete from member_playlist;
+delete from member_playlist_detail;
+delete from `member_play_history`;
+delete from music;
 
+
+
+SET foreign_key_checks = 0;
 INSERT INTO `member` (`member_name`, `member_email`, `password`, `phonenum`, `birthdate`, `gender`, `member_profile_image_url`) VALUES
 ('Alice', 'alice1@example.com', 'password1', '010-1111-1111', '1990-01-01 00:00:00', 'Female', 'http://example.com/image1'),
 ('Bob', 'bob2@example.com', 'password2', '010-2222-2222', '1985-02-02 00:00:00', 'Male', 'http://example.com/image2'),
@@ -65,7 +77,7 @@ INSERT INTO album_distributor (distributor_name, distributor_email, password, di
 ('Distributor Five', 'distributor5@example.com', 'password5', '010-1111-1115');
 
 
--- 
+--
 INSERT INTO member_payment_method (bank_name, account_number, del_yn, member_id) VALUES
 ('국민은행', '1111-1111-1111-1111', 0, 1),
 ('신한은행', '2222-2222-2222-2222', 0, 2),
@@ -141,3 +153,99 @@ INSERT INTO member_playlist_detail (playlist_id, music_id) VALUES
 (5, 18),
 (5, 19),
 (5, 20);
+
+
+
+-- member_play_history
+INSERT INTO `member_play_history` (`member_id`, `music_id`, `start_time`, `end_time`) VALUES
+(1, 1, '2023-01-01 10:00:00', '2023-01-01 10:03:00'),
+(2, 2, '2023-01-02 11:00:00', '2023-01-02 11:04:00'),
+(3, 3, '2023-01-03 12:00:00', '2023-01-03 12:05:00'),
+(4, 4, '2023-01-04 13:00:00', '2023-01-04 13:03:00'),
+(5, 5, '2023-01-05 14:00:00', '2023-01-05 14:02:00'),
+(6, 6, '2023-01-06 15:00:00', '2023-01-06 15:04:00'),
+(7, 7, '2023-01-07 16:00:00', '2023-01-07 16:06:00'),
+(8, 8, '2023-01-08 17:00:00', '2023-01-08 17:05:00'),
+(9, 9, '2023-01-09 18:00:00', '2023-01-09 18:04:00'),
+(10, 10, '2023-01-10 19:00:00', '2023-01-10 19:03:00'),
+(11, 11, '2023-01-11 20:00:00', '2023-01-11 20:02:00'),
+(12, 12, '2023-01-12 21:00:00', '2023-01-12 21:04:00'),
+(13, 13, '2023-01-13 22:00:00', '2023-01-13 22:06:00'),
+(14, 14, '2023-01-14 23:00:00', '2023-01-14 23:05:00'),
+(15, 15, '2023-01-15 09:00:00', '2023-01-15 09:03:00'),
+(16, 16, '2023-01-16 08:00:00', '2023-01-16 08:04:00'),
+(17, 17, '2023-01-17 07:00:00', '2023-01-17 07:05:00'),
+(18, 18, '2023-01-18 06:00:00', '2023-01-18 06:02:00'),
+(19, 19, '2023-01-19 05:00:00', '2023-01-19 05:03:00'),
+(20, 20, '2023-01-20 04:00:00', '2023-01-20 04:06:00'),
+(21, 21, '2023-01-21 03:00:00', '2023-01-21 03:05:00'),
+(22, 22, '2023-01-22 02:00:00', '2023-01-22 02:04:00'),
+(23, 23, '2023-01-23 01:00:00', '2023-01-23 01:06:00'),
+(24, 24, '2023-01-24 00:00:00', '2023-01-24 00:03:00'),
+(25, 25, '2023-01-25 10:00:00', '2023-01-25 10:04:00'),
+(26, 26, '2023-01-26 11:00:00', '2023-01-26 11:05:00'),
+(27, 27, '2023-01-27 12:00:00', '2023-01-27 12:02:00'),
+(28, 28, '2023-01-28 13:00:00', '2023-01-28 13:03:00'),
+(29, 29, '2023-01-29 14:00:00', '2023-01-29 14:04:00'),
+(30, 30, '2023-01-30 15:00:00', '2023-01-30 15:06:00'),
+(1, 31, '2023-02-01 10:00:00', '2023-02-01 10:05:00'),
+(2, 32, '2023-02-02 11:00:00', '2023-02-02 11:04:00'),
+(3, 33, '2023-02-03 12:00:00', '2023-02-03 12:06:00'),
+(4, 34, '2023-02-04 13:00:00', '2023-02-04 13:02:00'),
+(5, 35, '2023-02-05 14:00:00', '2023-02-05 14:03:00'),
+(6, 36, '2023-02-06 15:00:00', '2023-02-06 15:05:00'),
+(7, 37, '2023-02-07 16:00:00', '2023-02-07 16:04:00'),
+(8, 38, '2023-02-08 17:00:00', '2023-02-08 17:06:00'),
+(9, 39, '2023-02-09 18:00:00', '2023-02-09 18:02:00'),
+(10, 40, '2023-02-10 19:00:00', '2023-02-10 19:05:00'),
+(11, 1, '2023-02-11 20:00:00', '2023-02-11 20:06:00'),
+(12, 2, '2023-02-12 21:00:00', '2023-02-12 21:03:00'),
+(13, 3, '2023-02-13 22:00:00', '2023-02-13 22:05:00'),
+(14, 4, '2023-02-14 23:00:00', '2023-02-14 23:04:00'),
+(15, 5, '2023-02-15 09:00:00', '2023-02-15 09:02:00');
+
+
+-- music_title
+INSERT INTO `music` (`music_title`, `lyrics`, `music_file_url`, `playtime`, `like_count`, `del_yn`, `album_id`, `genre`) VALUES
+('Song of Freedom', 'Lyrics of freedom...', 'http://example.com/music1.mp3', 210, 100, 0, 1, 'k-pop'),
+('Love Symphony', 'Lyrics of love...', 'http://example.com/music2.mp3', 180, 200, 0, 1, 'pop'),
+('Mystery Night', 'Lyrics of mystery...', 'http://example.com/music3.mp3', 240, 150, 0, 2, 'j-pop'),
+('Dance Fever', 'Lyrics of dance...', 'http://example.com/music4.mp3', 200, 250, 0, 2, 'dance'),
+('Ballad of Dreams', 'Lyrics of dreams...', 'http://example.com/music5.mp3', 300, 50, 0, 3, 'ballad'),
+('Hip-Hop Hustle', 'Lyrics of hustle...', 'http://example.com/music6.mp3', 220, 300, 0, 3, 'hip-hop'),
+('Trot Delight', 'Lyrics of delight...', 'http://example.com/music7.mp3', 260, 75, 0, 4, 'trot'),
+('Pop Sensation', 'Lyrics of sensation...', 'http://example.com/music8.mp3', 190, 180, 0, 4, 'pop'),
+('K-Pop Magic', 'Lyrics of magic...', 'http://example.com/music9.mp3', 210, 110, 0, 5, 'k-pop'),
+('J-Pop Star', 'Lyrics of star...', 'http://example.com/music10.mp3', 230, 90, 0, 5, 'j-pop'),
+('Dance Party', 'Lyrics of party...', 'http://example.com/music11.mp3', 200, 220, 0, 6, 'dance'),
+('Ballad Harmony', 'Lyrics of harmony...', 'http://example.com/music12.mp3', 310, 130, 0, 6, 'ballad'),
+('Hip-Hop Beats', 'Lyrics of beats...', 'http://example.com/music13.mp3', 215, 270, 0, 7, 'hip-hop'),
+('Trot Joy', 'Lyrics of joy...', 'http://example.com/music14.mp3', 265, 95, 0, 7, 'trot'),
+('Pop Melody', 'Lyrics of melody...', 'http://example.com/music15.mp3', 195, 185, 0, 8, 'pop'),
+('K-Pop Rhythm', 'Lyrics of rhythm...', 'http://example.com/music16.mp3', 205, 120, 0, 8, 'k-pop'),
+('J-Pop Groove', 'Lyrics of groove...', 'http://example.com/music17.mp3', 225, 105, 0, 9, 'j-pop'),
+('Dance Floor', 'Lyrics of floor...', 'http://example.com/music18.mp3', 210, 240, 0, 9, 'dance'),
+('Ballad Serenade', 'Lyrics of serenade...', 'http://example.com/music19.mp3', 320, 140, 0, 10, 'ballad'),
+('Hip-Hop Flow', 'Lyrics of flow...', 'http://example.com/music20.mp3', 225, 310, 0, 10, 'hip-hop'),
+('Trot Bliss', 'Lyrics of bliss...', 'http://example.com/music21.mp3', 270, 85, 0, 11, 'trot'),
+('Pop Anthem', 'Lyrics of anthem...', 'http://example.com/music22.mp3', 205, 190, 0, 11, 'pop'),
+('K-Pop Star', 'Lyrics of star...', 'http://example.com/music23.mp3', 215, 130, 0, 12, 'k-pop'),
+('J-Pop Icon', 'Lyrics of icon...', 'http://example.com/music24.mp3', 235, 100, 0, 12, 'j-pop'),
+('Dance Energy', 'Lyrics of energy...', 'http://example.com/music25.mp3', 220, 210, 0, 13, 'dance'),
+('Ballad Soul', 'Lyrics of soul...', 'http://example.com/music26.mp3', 315, 150, 0, 13, 'ballad'),
+('Hip-Hop Vibe', 'Lyrics of vibe...', 'http://example.com/music27.mp3', 230, 280, 0, 14, 'hip-hop'),
+('Trot Tune', 'Lyrics of tune...', 'http://example.com/music28.mp3', 275, 70, 0, 14, 'trot'),
+('Pop Rhythm', 'Lyrics of rhythm...', 'http://example.com/music29.mp3', 200, 195, 0, 15, 'pop'),
+('K-Pop Beat', 'Lyrics of beat...', 'http://example.com/music30.mp3', 210, 125, 0, 15, 'k-pop'),
+('J-Pop Dance', 'Lyrics of dance...', 'http://example.com/music31.mp3', 220, 115, 0, 16, 'j-pop'),
+('Dance Fusion', 'Lyrics of fusion...', 'http://example.com/music32.mp3', 225, 250, 0, 16, 'dance'),
+('Ballad Story', 'Lyrics of story...', 'http://example.com/music33.mp3', 325, 160, 0, 17, 'ballad'),
+('Hip-Hop Jam', 'Lyrics of jam...', 'http://example.com/music34.mp3', 235, 290, 0, 17, 'hip-hop'),
+('Trot Melody', 'Lyrics of melody...', 'http://example.com/music35.mp3', 280, 80, 0, 18, 'trot'),
+('Pop Groove', 'Lyrics of groove...', 'http://example.com/music36.mp3', 210, 200, 0, 18, 'pop'),
+('K-Pop Wave', 'Lyrics of wave...', 'http://example.com/music37.mp3', 215, 140, 0, 19, 'k-pop'),
+('J-Pop Dream', 'Lyrics of dream...', 'http://example.com/music38.mp3', 230, 110, 0, 19, 'j-pop'),
+('Dance Magic', 'Lyrics of magic...', 'http://example.com/music39.mp3', 215, 220, 0, 20, 'dance'),
+('Ballad Heart', 'Lyrics of heart...', 'http://example.com/music40.mp3', 330, 170, 0, 20, 'ballad');
+SET foreign_key_checks = 1;
+
