@@ -74,7 +74,7 @@ CREATE TABLE `admin` (
 	`admin_id`	int	PRIMARY KEY AUTO_INCREMENT,
 	`admin_name`	varchar(30)	NOT NULL,
 	`admin_email`	varchar(100)	NOT NULL UNIQUE,
-	`password`	varchar(255)	NOT NULL,
+	`password`	varchar(30)	NOT NULL,
 	`phone_num`	varchar(20)	NOT NULL
 );
 
@@ -83,7 +83,7 @@ CREATE TABLE `album_distributor` (
 	`distributor_id`	int	PRIMARY KEY AUTO_INCREMENT,
 	`distributor_name`	varchar(30)	NOT NULL,
 	`distributor_email`	varchar(100)	NOT NULL	UNIQUE,
-	`password`	varchar(255)	NOT NULL,
+	`password`	varchar(30)	NOT NULL,
 	`distributor_num`	varchar(20)	NOT NULL
 );
 
@@ -127,9 +127,9 @@ CREATE TABLE music_artist (
 DROP TABLE IF EXISTS `member_payment_method`;
 
 CREATE TABLE `member_payment_method` (
-	`payment_method_id` bigint NOT NULL COMMENT 'auto_Increment',
+	`payment_method_id` bigint NOT NULL auto_Increment,
 	`bank_name` enum('국민은행', '신한은행', '우리은행', '하나은행', '카카오뱅크') NOT NULL,
-	`account_number` varchar(30) NOT NULL COMMENT 'unique',
+	`account_number` varchar(30) NOT NULL unique,
 	`del_yn` tinyint(1) NOT NULL DEFAULT 0,
 	`member_id` bigint NOT NULL,
 	PRIMARY KEY (`payment_method_id`),
@@ -149,7 +149,7 @@ CREATE TABLE `music_dislike` (
 DROP TABLE IF EXISTS `music_chart`;
 
 CREATE TABLE `music_chart` (
-	`chart_id` bigint NOT NULL COMMENT 'auto_Increment',
+	`chart_id` bigint NOT NULL auto_Increment,
 	`music_id` bigint NOT NULL,
 	`rank` bigint NOT NULL,
 	PRIMARY KEY (`chart_id`),
@@ -160,27 +160,27 @@ CREATE TABLE `music_chart` (
 DROP TABLE IF EXISTS `member`;
 
 CREATE TABLE `member` (
-	`member_id` bigint NOT NULL COMMENT 'auto_Increment',
+	`member_id` bigint NOT NULL auto_Increment,
 	`member_name` varchar(20) NOT NULL,
-	`member_email` varchar(100) NOT NULL COMMENT 'unique',
-	`password` varchar(255) NOT NULL,
-	`phonenum` varchar(20) NOT NULL COMMENT 'unique',
+	`member_email` varchar(100) NOT NULL unique,
+	`password` varchar(30) NOT NULL,
+	`phonenum` varchar(20) NOT NULL unique,
 	`birthdate` timestamp NOT NULL,
 	`gender` varchar(10) NOT NULL,
-	`accound_id` varchar(100) NULL,
+	`account_id` varchar(100) NULL,
 	`member_profile_image_url` varchar(2083) NULL,
 	`membership` tinyint(1) NOT NULL DEFAULT 0,
-	`Del_YN` tinyint(1) NOT NULL DEFAULT 0,
+	`del_yn` tinyint(1) NOT NULL DEFAULT 0,
 	PRIMARY KEY (`member_id`)
 );
 
 DROP TABLE IF EXISTS `artist`;
 
 CREATE TABLE `artist` (
-	`artist_id` bigint NOT NULL COMMENT 'auto_increment',
+	`artist_id` bigint NOT NULL auto_increment,
 	`artist_name` varchar(30) NOT NULL,
-	`artist_email` varchar(100) NOT NULL COMMENT 'unique',
-	`password` varchar(50) NOT NULL,
+	`artist_email` varchar(100) NOT NULL unique,
+	`password` varchar(30) NOT NULL,
 	`phone_num` varchar(20) NOT NULL,
 	`artist_profile_image_url` varchar(2083) NULL,
     PRIMARY KEY (`artist_id`)
