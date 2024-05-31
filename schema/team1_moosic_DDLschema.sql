@@ -15,6 +15,7 @@ CREATE TABLE `music` (
 `like_count`	bigint	NOT NULL	DEFAULT 0,
 `del_yn`	tinyint(1)	NOT NULL	DEFAULT 0,
 `album_id`	bigint	NOT NULL,
+`genre`    enum('k-pop', 'pop', 'j-pop', 'dance', 'ballad', 'hip-hop', 'trot')    NOT NULL,
 foreign key music(album_id) references album(album_id)
 );
 
