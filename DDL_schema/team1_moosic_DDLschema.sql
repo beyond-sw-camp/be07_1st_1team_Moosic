@@ -40,7 +40,7 @@ CREATE TABLE `member_playlist` (
 `created_at`	timestamp	NOT NULL	DEFAULT current_timestamp,
 `updated_at`	timestamp	NOT NULL	DEFAULT current_timestamp,
 `playlist_thumbnail_url`	varchar(2083)	NOT NULL,
-`del_yn`	tinyint(1)	NOT NULL,
+`del_yn`	tinyint(1)	NOT NULL	DEFAULT 0,
 `member_id`	bigint	NOT NULL,
 foreign key (member_id) references `member`(member_id) on delete cascade on update cascade
 );
