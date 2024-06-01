@@ -1,8 +1,8 @@
 ------------------------------------- 멤버 로그인 ---------------------------------------
-drop procedure login_member;
+drop procedure 멤버로그인;
 DELIMITER //
 
-CREATE PROCEDURE login_member(
+CREATE PROCEDURE 멤버로그인(
     in m_member_email varchar(100),
     in m_password varchar(30)
 )
@@ -30,10 +30,10 @@ call login_member('alice1@example.com', 'password');
 
 ------------------------------------- 관리자 로그인 ---------------------------------------
 
-drop procedure login_admin;
+drop procedure 관리자로그인;
 DELIMITER //
 
-CREATE PROCEDURE login_admin(
+CREATE PROCEDURE 관리자로그인(
     in ad_artist_email varchar(100),
     in ad_password varchar(30)
 )
@@ -61,10 +61,10 @@ call login_admin('alice1.kim@example.com', 'password123'); -- 실패
 
 ------------------------------------- 아티스트 로그인 ---------------------------------------
 
-drop procedure login_artist;
+drop procedure 아티스트로그인;
 DELIMITER //
 
-CREATE PROCEDURE login_artist(
+CREATE PROCEDURE 아티스트로그인(
     in ar_artist_email varchar(100),
     in ar_password varchar(30)
 )
@@ -92,10 +92,10 @@ call login_artist('artist1@example.com', 'password12');    -- 실패
 ------------------------------------- 배급사 로그인 ---------------------------------------
 select * from album_distributor;
 
-drop procedure login_distributor;
+drop procedure 배급사로그인;
 DELIMITER //
 
-CREATE PROCEDURE login_distributor(
+CREATE PROCEDURE 배급사로그인(
     in dis_distirbutor_email varchar(100),
     in dis_password varchar(30)
 )

@@ -1,8 +1,8 @@
 --------------------------------------회원 탈퇴_멤버-----------------------------------------------------
-drop procedure secession_member;
+drop procedure 회원탈퇴;
 DELIMITER //
 
-CREATE PROCEDURE secession_member(
+CREATE PROCEDURE 회원탈퇴(
     in m_member_email varchar(100),
     in m_password varchar(30)
 )

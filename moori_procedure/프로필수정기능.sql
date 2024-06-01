@@ -1,14 +1,18 @@
---------------------------------------회원 탈퇴_멤버-----------------------------------------------------
-drop procedure change_member_information;
+--------------------------------------회원 정보 수정-----------------------------------------------------
+drop procedure 회원정보수정;
+select * from member;
 DELIMITER //
 
-CREATE PROCEDURE correction_member_information(
+CREATE PROCEDURE 회원정보수정(
     in m_member_email varchar(100),
-    in m_password varchar(30)
+    in m_password varchar(30),
+    in m_c_password varchar(30),
+    in m_c_phonenum varchar(20),
+    in m_c_account_id varchar(100),
+    in m_c_profile varchar(2083)
 )
 BEGIN
-    -- login_check 라는 int 타입의 변수 선언
-    declare login_check int;
+	declare login_check int;
     
     -- 입력받은 이메일과 비밀번호가 artist 의 이메일과 비밀번호와 같다면 login_check 에 1을 넣는다.
     select 1 into login_check from member where password = m_password and member_email = m_member_email;
@@ -16,15 +20,17 @@ BEGIN
     -- login_check 가 1이라면 로그인 성공 출력
     -- 1이 아니라면 잘못된 로그인 정보입니다. 를 출력
     if login_check = 1 then
-		update member set del_yn = 1 where member_email = m_member_email;
-        select '회원탈퇴 완료';
+		update member set password = m_c_password where m_c_password is not null and member_email = m_member_email;
+        update member set phonenum = m_c_phonenum where m_c_phonenum is not null and member_email = m_member_email;
+        update member set account_id = m_c_account_id where m_c_account_id is not null and member_email = m_member_email;
+        update member set member_profile_image_url = m_c_profile where m_c_profile is not null and member_email = m_member_email;
 	else
 		select '잘못된 정보입니다.' as 결과창;
 	end if;
-END //
-
+end// 
 DELIMITER ;
 
 call secession_member('alice1@example.com','password1');
 select * from member;
 
+call correction_member_information('alice1@example.com', 'password', 'password1', null , null, null);
