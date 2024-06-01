@@ -168,11 +168,12 @@ CREATE TABLE `member` (
 	`phonenum` varchar(20) NOT NULL unique,
 	`birthdate` date NOT NULL,
 	`gender` varchar(10) NOT NULL,
-	`account_id` varchar(100) NULL,
+	`payment_method_id` bigint NULL,
 	`member_profile_image_url` varchar(2083) NULL,
 	`membership` tinyint(1) NOT NULL DEFAULT 0,
 	`del_yn` tinyint(1) NOT NULL DEFAULT 0,
-	PRIMARY KEY (`member_id`)
+	PRIMARY KEY (`member_id`),
+	FOREIGN KEY (`payment_method_id`) REFERENCES `member_payment_method` (`payment_method_id`)
 );
 
 DROP TABLE IF EXISTS `artist`;
