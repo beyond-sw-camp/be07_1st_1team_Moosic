@@ -16,7 +16,7 @@ CREATE TABLE `music` (
 `del_yn`	tinyint(1)	NOT NULL	DEFAULT 0,
 `album_id`	bigint	NOT NULL,
 `genre`    enum('k-pop', 'pop', 'j-pop', 'dance', 'ballad', 'hip-hop', 'trot')    NOT NULL,
-foreign key music(album_id) references album(album_id)
+foreign key music(album_id) references album(album_id) on delete cascade on update cascade
 );
 
 DROP TABLE IF EXISTS `album`;
@@ -29,7 +29,7 @@ CREATE TABLE `album` (
 `album_art_image_url`	varchar(2083) not NULL default '?',
 `del_yn`	tinyint(1)	NOT NULL	DEFAULT 0,
 `distributor_id`	int	NOT NULL,
-foreign key album(distributor_id) references album_distributor(distributor_id)
+foreign key album(distributor_id) references album_distributor(distributor_id) on delete cascade on update cascade
 );
 
 DROP TABLE IF EXISTS `member_playlist`;
@@ -40,9 +40,9 @@ CREATE TABLE `member_playlist` (
 `created_at`	timestamp	NOT NULL	DEFAULT current_timestamp,
 `updated_at`	timestamp	NOT NULL	DEFAULT current_timestamp,
 `playlist_thumbnail_url`	varchar(2083)	NOT NULL,
-`del_yn`	tinyint(1)	NOT NULL,
+`del_yn`	tinyint(1)	NOT NULL	DEFAULT 0,
 `member_id`	bigint	NOT NULL,
-foreign key (member_id) references `member`(member_id)
+foreign key (member_id) references `member`(member_id) on delete cascade on update cascade
 );
 
 DROP TABLE IF EXISTS `member_play_history`;
@@ -53,8 +53,8 @@ CREATE TABLE `member_play_history` (
 `music_id`	bigint	NOT NULL,
 `start_time`	timestamp	NOT NULL	DEFAULT current_timestamp,
 `end_time`	timestamp	NULL	DEFAULT current_timestamp,
-foreign key (member_id) references `member`(member_id),
-foreign key (music_id) references music(music_id)
+foreign key (member_id) references `member`(member_id) on delete cascade on update cascade,
+foreign key (music_id) references music(music_id) on delete cascade on update cascade
 );
 
 DROP TABLE IF EXISTS `music_like`;
@@ -63,8 +63,8 @@ CREATE TABLE `music_like` (
 `music_id`	bigint	NOT NULL,
 `member_id`	bigint	NOT NULL,
 `created_date`	timestamp	NOT NULL	DEFAULT current_timestamp,
-foreign key (music_id) references music(music_id),
-foreign key (member_id) references `member`(member_id)
+foreign key (music_id) references music(music_id) on delete cascade on update cascade,
+foreign key (member_id) references `member`(member_id) on delete cascade on update cascade
 );
 
 
@@ -97,8 +97,8 @@ CREATE TABLE `member_payment_history` (
 	`cancel_yn`	tinyint(1)	NOT NULL	DEFAULT 0,
 	`member_id`	bigint	NOT NULL,
 	`payment_method_id`	bigint	NOT NULL,
-    FOREIGN KEY (member_id) REFERENCES `member`(member_id),
-    FOREIGN KEY (payment_method_id) REFERENCES member_payment_method(payment_method_id)
+    FOREIGN KEY (member_id) REFERENCES `member`(member_id) on delete cascade on update cascade,
+    FOREIGN KEY (payment_method_id) REFERENCES member_payment_method(payment_method_id) on delete cascade on update cascade
 );
 
 
@@ -108,8 +108,8 @@ CREATE TABLE `member_playlist_detail` (
 	`detail_id`	bigint	PRIMARY KEY	AUTO_INCREMENT,
 	`playlist_id`	bigint	NOT NULL,
 	`music_id`	bigint	NOT NULL,
-	FOREIGN KEY (playlist_id) REFERENCES member_playlist(playlist_id),
-	FOREIGN KEY (music_id) REFERENCES music(music_id)
+	FOREIGN KEY (playlist_id) REFERENCES member_playlist(playlist_id) on delete cascade on update cascade,
+	FOREIGN KEY (music_id) REFERENCES music(music_id) on delete cascade on update cascade
 );
 
 
@@ -120,8 +120,8 @@ CREATE TABLE music_artist (
     artist_type    enum('메인 아티스트', '작곡가', '작사가', '편곡자', '실연자')    NOT NULL,
     music_id    bigint    NOT NULL,
     artist_id    bigint    NOT NULL,
-    foreign key (music_id) references music(music_id),
-    foreign key (artist_id) references artist(artist_id)
+    foreign key (music_id) references music(music_id) on delete cascade on update cascade,
+    foreign key (artist_id) references artist(artist_id) on delete cascade on update cascade
 );
 
 -- jiho
@@ -134,7 +134,7 @@ CREATE TABLE `member_payment_method` (
 	`del_yn` tinyint(1) NOT NULL DEFAULT 0,
 	`member_id` bigint NOT NULL,
 	PRIMARY KEY (`payment_method_id`),
-	FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`)
+	FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`) on delete cascade on update cascade
 );
 
 DROP TABLE IF EXISTS `music_dislike`;
@@ -143,8 +143,8 @@ CREATE TABLE `music_dislike` (
 	`member_id` bigint NOT NULL,
 	`music_id` bigint NOT NULL,
 	PRIMARY KEY (`member_id`, `music_id`),
-	FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`),
-	FOREIGN KEY (`music_id`) REFERENCES `music` (`music_id`)
+	FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`) on delete cascade on update cascade,
+	FOREIGN KEY (`music_id`) REFERENCES `music` (`music_id`) on delete cascade on update cascade
 );
 
 DROP TABLE IF EXISTS `music_chart`;
@@ -154,7 +154,7 @@ CREATE TABLE `music_chart` (
 	`music_id` bigint NOT NULL,
 	`rank` bigint NOT NULL,
 	PRIMARY KEY (`chart_id`),
-	FOREIGN KEY (`music_id`) REFERENCES `music` (`music_id`)
+	FOREIGN KEY (`music_id`) REFERENCES `music` (`music_id`) on delete cascade on update cascade
 );
 
 
