@@ -1,8 +1,11 @@
-
-# 프로젝트 개요
 <div align="center">
-<img width="711" alt="스크린샷 2024-06-02 오후 4 18 11" src="https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/21eba64e-5b4b-423e-8911-9a5860677f77">
+<img width="1280" alt="스크린샷 2024-06-02 오후 4 32 52" src="https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/87ef7c0f-c871-4ede-85c7-9364c0fd3ab5">
 </div>
+
+
+    
+# 프로젝트 개요
+
 
 
 작성 예정입니다.
