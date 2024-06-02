@@ -151,6 +151,7 @@ CREATE TABLE `music_chart` (
 	`chart_id` bigint PRIMARY KEY AUTO_INCREMENT,
 	`music_id` bigint NOT NULL,
 	`rank` bigint NOT NULL,
+	`genre` enum('k-pop', 'pop', 'j-pop', 'dance', 'ballad', 'hip-hop', 'trot', 'total'),
 	FOREIGN KEY (`music_id`) REFERENCES `music` (`music_id`) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
