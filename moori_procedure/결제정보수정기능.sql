@@ -24,6 +24,10 @@ BEGIN
 		select * from member_payment_method where payment_method_id = method_id;
 		update member_payment_method set del_yn = 1 where payment_method_id = method_id;
         insert into member_payment_method(bank_name, account_number, member_id) values (input_bank, input_account, member_id_check);
+        update member set payment_method_id = (select payment_method_id 
+                                               from member_payment_method 
+                                               where member_id = member_id_check and del_yn = 0)
+                where member_id = member_id_check;
         select '정보 수정 완료';
 	else
 		select '등록된 결제 정보가 없습니다.' as 결과;
