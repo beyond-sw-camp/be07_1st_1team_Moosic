@@ -5,15 +5,13 @@ BEGIN
     DECLARE can_refund_exists INT;
     DECLARE history_id bigint;
 
-  
-	SELECT 
+	SELECT
 		payment_history_id
-        INTO history_id 
+        INTO history_id
 	FROM member_payment_history AS mph
 	WHERE mph.member_id = input_member_id and mph.cancel_yn = 0 AND datediff(CURRENT_DATE, mph.created_at) <= 3
 	ORDER BY mph.created_at desc
     LIMIT 1;
-
 
     -- 결과가 NULL이면 -1을 할당
     IF history_id IS NULL THEN

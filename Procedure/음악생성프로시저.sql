@@ -3,7 +3,7 @@ DELIMITER //
 CREATE PROCEDURE make_music
 	(IN in_title varchar(255)
     , IN in_lyrics varchar(10000)
-    , IN in_img varchar(2083)
+    , IN in_url varchar(2083)
     , IN in_pt int(10)
     , IN in_id BIGINT
     , IN in_genre enum('k-pop','pop','j-pop','dance','ballad','hip-hop','trot'))
@@ -19,7 +19,7 @@ BEGIN
 VALUES
 (in_title,
 in_lyrics,
-in_img,
+in_url,
 in_pt,
 in_id,
 in_genre);
