@@ -4,8 +4,7 @@ CREATE PROCEDURE make_popular_chart(
 	IN in_genre varchar(20)
 )
 BEGIN
-	DELETE from music_chart;
-    
+	DELETE from music_chart where genre = in_genre;
     
     IF in_genre = 'total' THEN
 		INSERT INTO music_chart(genre, popular_rank, music_id) 
@@ -47,3 +46,10 @@ END //
 DELIMITER ;
 
 CALL make_popular_chart('total');
+CALL make_popular_chart('k-pop');
+CALL make_popular_chart('pop');
+CALL make_popular_chart('j-pop');
+CALL make_popular_chart('dance');
+CALL make_popular_chart('ballad');
+CALL make_popular_chart('hip-hop');
+CALL make_popular_chart('trot');
