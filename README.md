@@ -31,10 +31,8 @@
 # 🧩 ERD
 
  [ERD 클라우드에서 보기](https://www.erdcloud.com/d/DPiPTZryaNWEzfLcM)
- ![moosic-erd](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/270f6637-9dab-4c0f-a4a6-fe46ceb6f808)
 
-
- 
+![moosic-erd](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/39020b39-9b2e-4102-b22d-8bf6f85d7608) 
 
 ---
 # 📑 Schema
