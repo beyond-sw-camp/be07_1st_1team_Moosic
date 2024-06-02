@@ -1,17 +1,16 @@
-delete from `member`;
-delete from `artist`;
-delete from album_distributor;
-delete from member_payment_method;
-delete from member_payment_history;
-delete from member_playlist;
-delete from member_playlist_detail;
-delete from `member_play_history`;
-delete from music;
-delete from album;
-
-
-
 SET foreign_key_checks = 0;
+
+TRUNCATE `member`;
+TRUNCATE `artist`;
+TRUNCATE album_distributor;
+TRUNCATE member_payment_method;
+TRUNCATE member_payment_history;
+TRUNCATE member_playlist;
+TRUNCATE member_playlist_detail;
+TRUNCATE `member_play_history`;
+TRUNCATE music;
+TRUNCATE album;
+
 INSERT INTO `member` (`member_name`, `member_email`, `password`, `phonenum`, `birthdate`, `gender`, `member_profile_image_url`) VALUES
 ('Alice', 'alice1@example.com', 'password1', '010-1111-1111', '1990-01-01 00:00:00', 'Female', 'http://example.com/image1'),
 ('Bob', 'bob2@example.com', 'password2', '010-2222-2222', '1985-02-02 00:00:00', 'Male', 'http://example.com/image2'),
@@ -46,27 +45,27 @@ INSERT INTO `member` (`member_name`, `member_email`, `password`, `phonenum`, `bi
 
 
 -- artist
-INSERT INTO `artist` (`artist_name`, `artist_email`, `password`, `phone_num`, `artist_profile_image_url`) VALUES
-('Artist One', 'artist1@example.com', 'password1', '010-1111-1111', 'http://example.com/image1'),
-('Artist Two', 'artist2@example.com', 'password2', '010-1111-1112', 'http://example.com/image2'),
-('Artist Three', 'artist3@example.com', 'password3', '010-1111-1113', 'http://example.com/image3'),
-('Artist Four', 'artist4@example.com', 'password4', '010-1111-1114', 'http://example.com/image4'),
-('Artist Five', 'artist5@example.com', 'password5', '010-1111-1115', 'http://example.com/image5'),
-('Artist Six', 'artist6@example.com', 'password6', '010-1111-1116', 'http://example.com/image6'),
-('Artist Seven', 'artist7@example.com', 'password7', '010-1111-1117', 'http://example.com/image7'),
-('Artist Eight', 'artist8@example.com', 'password8', '010-1111-1118', 'http://example.com/image8'),
-('Artist Nine', 'artist9@example.com', 'password9', '010-1111-1119', 'http://example.com/image9'),
-('Artist Ten', 'artist10@example.com', 'password10', '010-1111-1120', 'http://example.com/image10'),
-('Artist Eleven', 'artist11@example.com', 'password11', '010-1111-1121', 'http://example.com/image11'),
-('Artist Twelve', 'artist12@example.com', 'password12', '010-1111-1122', 'http://example.com/image12'),
-('Artist Thirteen', 'artist13@example.com', 'password13', '010-1111-1123', 'http://example.com/image13'),
-('Artist Fourteen', 'artist14@example.com', 'password14', '010-1111-1124', 'http://example.com/image14'),
-('Artist Fifteen', 'artist15@example.com', 'password15', '010-1111-1125', 'http://example.com/image15'),
-('Artist Sixteen', 'artist16@example.com', 'password16', '010-1111-1126', 'http://example.com/image16'),
-('Artist Seventeen', 'artist17@example.com', 'password17', '010-1111-1127', 'http://example.com/image17'),
-('Artist Eighteen', 'artist18@example.com', 'password18', '010-1111-1128', 'http://example.com/image18'),
-('Artist Nineteen', 'artist19@example.com', 'password19', '010-1111-1129', 'http://example.com/image19'),
-('Artist Twenty', 'artist20@example.com', 'password20', '010-1111-1130', 'http://example.com/image20');
+INSERT INTO `artist` (`artist_name`, `artist_profile_image_url`) VALUES
+('Artist One', 'http://example.com/image1'),
+('Artist Two', 'http://example.com/image2'),
+('Artist Three', 'http://example.com/image3'),
+('Artist Four', 'http://example.com/image4'),
+('Artist Five', 'http://example.com/image5'),
+('Artist Six', 'http://example.com/image6'),
+('Artist Seven', 'http://example.com/image7'),
+('Artist Eight', 'http://example.com/image8'),
+('Artist Nine', 'http://example.com/image9'),
+('Artist Ten', 'http://example.com/image10'),
+('Artist Eleven', 'http://example.com/image11'),
+('Artist Twelve', 'http://example.com/image12'),
+('Artist Thirteen', 'http://example.com/image13'),
+('Artist Fourteen', 'http://example.com/image14'),
+('Artist Fifteen', 'http://example.com/image15'),
+('Artist Sixteen', 'http://example.com/image16'),
+('Artist Seventeen', 'http://example.com/image17'),
+('Artist Eighteen', 'http://example.com/image18'),
+('Artist Nineteen', 'http://example.com/image19'),
+('Artist Twenty', 'http://example.com/image20');
 
 
 -- album_distributor
@@ -272,5 +271,3 @@ INSERT INTO album (album_title, music_count, release_date, album_art_image_url, 
 ('Latin Hits', 4, '2023-07-15 16:00:00', 'http://example.com/art19.jpg', 0, 4),
 ('World Music', 2, '2023-08-15 17:00:00', 'http://example.com/art20.jpg', 0, 5);
 SET foreign_key_checks = 1;
-
-
