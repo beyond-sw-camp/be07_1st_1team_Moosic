@@ -30,7 +30,10 @@
 ---
 # 🧩 ERD
 
- 작성 예정입니다.
+ [ERD 클라우드에서 보기](https://www.erdcloud.com/d/DPiPTZryaNWEzfLcM)
+ ![moosic-erd](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/270f6637-9dab-4c0f-a4a6-fe46ceb6f808)
+
+
  
 
 ---
