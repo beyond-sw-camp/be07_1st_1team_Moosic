@@ -1,13 +1,22 @@
-# 프로젝트 개요
 
-작성 예정입니다.
+# 프로젝트 개요
+<div align="center">
+<img width="711" alt="스크린샷 2024-06-02 오후 4 18 11" src="https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/21eba64e-5b4b-423e-8911-9a5860677f77">
+</div>
+
+
 
  
 ---
 # 요구사항 정의서
 
+[요구사항 정의서 노션에서 보기](https://clean01.notion.site/Moosic-ac9c31c3d0234ed5acb1b175acf572bd?pvs=4)
 
- 작성 예정입니다.
+<div>
+<img width="638" alt="스크린샷 2024-06-02 오후 4 22 25" src="https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/e5b58297-6274-4f90-a507-31ed1f6e31f4">
+<img width="642" alt="스크린샷 2024-06-02 오후 4 22 54" src="https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/d1af80ec-2473-4df1-9c5d-16dc5e0c5e87">
+</div>
+
 
 ---
 # ERD
