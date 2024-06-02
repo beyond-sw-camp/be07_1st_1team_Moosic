@@ -119,7 +119,6 @@ CREATE TABLE `music_dislike` (
   
 ### 8. 관리자
 ```sql
-DROP TABLE IF EXISTS `admin`;
 CREATE TABLE `admin` (
 	`admin_id`	int	PRIMARY KEY AUTO_INCREMENT,
 	`admin_name`	varchar(30)	NOT NULL,
@@ -132,7 +131,6 @@ CREATE TABLE `admin` (
   
 ### 9. 배급사
 ```sql
-DROP TABLE IF EXISTS `album_distributor`;
 CREATE TABLE `album_distributor` (
 	`distributor_id`	int	PRIMARY KEY AUTO_INCREMENT,
 	`distributor_name`	varchar(30)	NOT NULL,
@@ -184,21 +182,8 @@ CREATE TABLE `member_payment_method` (
 );
 ```
 
-   
-### 13. 회원 - 결제 수단 교차 테이블
-```sql
-CREATE TABLE `member_payment_method` (
-	`payment_method_id` bigint PRIMARY KEY AUTO_INCREMENT,
-	`bank_name` enum('국민은행', '신한은행', '우리은행', '하나은행', '카카오뱅크') NOT NULL,
-	`account_number` varchar(30) NOT NULL unique,
-	`del_yn` tinyint(1) NOT NULL DEFAULT 0,
-	`member_id` bigint NOT NULL,
-	FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`) ON DELETE CASCADE ON UPDATE CASCADE
-);
-```
-
   
-### 14. 결제 이력
+### 13. 결제 이력
 ```sql
 CREATE TABLE `member_payment_history` (
 	`payment_history_id`	bigint	PRIMARY KEY AUTO_INCREMENT,
@@ -213,7 +198,7 @@ CREATE TABLE `member_payment_history` (
 ```
   
 
-### 15. 음원에 참여한 아티스트
+### 14. 음원에 참여한 아티스트
 ```sql
 CREATE TABLE music_artist (
     music_artist_id    bigint    PRIMARY KEY AUTO_INCREMENT,
@@ -225,7 +210,7 @@ CREATE TABLE music_artist (
 );
 ```
 
-### 16. 인기 차트
+### 15. 인기 차트
 ```sql
 CREATE TABLE `music_chart` (
 	`chart_id` bigint PRIMARY KEY AUTO_INCREMENT,
