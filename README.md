@@ -4,15 +4,20 @@
 
 
     
-# 프로젝트 개요
+# 🎵 프로젝트 개요
 
 
 
 작성 예정입니다.
 
- 
 ---
-# 요구사항 정의서
+# ✨ 프로젝트 중점 사항
+
+- 음악 스트리밍 서비스에 존재하는 여러 N:M, 1:N 관계를 해결하며 데이터베이스 설계에 대한 이해도를 높이기 위해 노력했습니다.
+- 
+
+---
+# 📝 요구사항 정의서
 
 [요구사항 정의서 노션에서 보기](https://clean01.notion.site/Moosic-ac9c31c3d0234ed5acb1b175acf572bd?pvs=4)
 
@@ -23,13 +28,13 @@
 
 
 ---
-# ERD
+# 🧩 ERD
 
  작성 예정입니다.
  
 
 ---
-# Schema
+# 📑 Schema
 Moosic은 총 15개의 테이블로 구성되어 있습니다.
   
 자세한 내용은 [여기](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/blob/main/schema/team1_moosic_schema.sql)에서 보실 수 있습니다.
@@ -234,13 +239,17 @@ CREATE TABLE `music_chart` (
 ```
 
 ---
-# 프로시저 실행 결과
+# 💻 프로시저 실행 결과
 
 
  작성 예정입니다.
+ 
+---
+# 🤔 설계에 대한 고민
+- 작성 예정입니다.
 
- ---
-# 팀
+---
+# 🍀 팀
 
 <figure>
     <table>
