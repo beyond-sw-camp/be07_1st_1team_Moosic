@@ -1,3 +1,5 @@
+SET foreign_key_checks = 0;
+
 TRUNCATE `member`;
 TRUNCATE `artist`;
 TRUNCATE album_distributor;
@@ -9,9 +11,6 @@ TRUNCATE `member_play_history`;
 TRUNCATE music;
 TRUNCATE album;
 
-
-
-SET foreign_key_checks = 0;
 INSERT INTO `member` (`member_name`, `member_email`, `password`, `phonenum`, `birthdate`, `gender`, `member_profile_image_url`) VALUES
 ('Alice', 'alice1@example.com', 'password1', '010-1111-1111', '1990-01-01 00:00:00', 'Female', 'http://example.com/image1'),
 ('Bob', 'bob2@example.com', 'password2', '010-2222-2222', '1985-02-02 00:00:00', 'Male', 'http://example.com/image2'),
