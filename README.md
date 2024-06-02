@@ -17,8 +17,223 @@
 
 ---
 # Schema
+Moosic은 총 15개의 테이블로 구성되어 있습니다.
+  
+자세한 내용은 [여기](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/blob/main/schema/team1_moosic_schema.sql)에서 보실 수 있습니다.
+  
+### 1. 음원
+```sql
+CREATE TABLE `music` (
+`music_id`	bigint PRIMARY KEY AUTO_INCREMENT,
+`music_title`	varchar(255) NOT NULL,
+`lyrics`	varchar(10000),
+`music_file_url`	varchar(2083) NOT NULL,
+`playtime`	int unsigned NOT NULL,
+`like_count`	bigint	NOT NULL	DEFAULT 0,
+`del_yn`	tinyint(1)	NOT NULL	DEFAULT 0,
+`album_id`	bigint	NOT NULL,
+`genre`    enum('k-pop', 'pop', 'j-pop', 'dance', 'ballad', 'hip-hop', 'trot')    NOT NULL,
+FOREIGN KEY music(album_id) REFERENCES album(album_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+```
 
-  작성 예정입니다.
+  
+### 2. 앨범
+```sql
+CREATE TABLE `album` (
+`album_id`	bigint	PRIMARY KEY AUTO_INCREMENT,
+`album_title`	varchar(255)	NOT NULL,
+`music_count`	int	NOT NULL DEFAULT 0,
+`release_date`	timestamp	NOT NULL,
+`album_art_image_url`	varchar(2083) NOT NULL DEFAULT '?',
+`del_yn`	tinyint(1)	NOT NULL	DEFAULT 0,
+`distributor_id`	int	NOT NULL,
+FOREIGN KEY album(distributor_id) REFERENCES album_distributor(distributor_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+```
+
+  
+### 3. 플레이리스트
+```sql
+CREATE TABLE `member_playlist` (
+`playlist_id`	bigint	PRIMARY KEY AUTO_INCREMENT,
+`playlist_title`	varchar(255)	NOT NULL,
+`created_at`	timestamp	NOT NULL	DEFAULT CURRENT_TIMESTAMP,
+`updated_at`	timestamp	NOT NULL	DEFAULT CURRENT_TIMESTAMP,
+`playlist_thumbnail_url`	varchar(2083)	NOT NULL,
+`del_yn`	tinyint(1)	NOT NULL	DEFAULT 0,
+`member_id`	bigint	NOT NULL,
+FOREIGN KEY (member_id) REFERENCES `member`(member_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+```
+
+  
+### 4. 플레이리스트 세부 내역
+```sql
+CREATE TABLE `member_playlist_detail` (
+	`detail_id`	bigint	PRIMARY KEY	AUTO_INCREMENT,
+	`playlist_id`	bigint	NOT NULL,
+	`music_id`	bigint	NOT NULL,
+	FOREIGN KEY (playlist_id) REFERENCES member_playlist(playlist_id) ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY (music_id) REFERENCES music(music_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+```
+
+  
+### 5. 음원 재생 이력
+```sql
+CREATE TABLE `member_play_history` (
+`play_cnt_id`	bigint	PRIMARY KEY AUTO_INCREMENT,
+`member_id`	bigint	NOT NULL,
+`music_id`	bigint	NOT NULL,
+`start_time`	timestamp	NOT NULL	DEFAULT CURRENT_TIMESTAMP,
+`end_time`	timestamp	NULL	DEFAULT CURRENT_TIMESTAMP,
+FOREIGN KEY (member_id) REFERENCES `member`(member_id) ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY (music_id) REFERENCES music(music_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+```
+
+  
+### 6. 좋아요
+```sql
+CREATE TABLE `music_like` (
+`music_id`	bigint	NOT NULL,
+`member_id`	bigint	NOT NULL,
+`created_date`	timestamp	NOT NULL	DEFAULT CURRENT_TIMESTAMP,
+FOREIGN KEY (music_id) REFERENCES music(music_id) ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY (member_id) REFERENCES `member`(member_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+```
+
+  
+### 7. 싫어요
+```sql
+CREATE TABLE `music_dislike` (
+	`member_id` bigint PRIMARY KEY AUTO_INCREMENT,
+	`music_id` bigint NOT NULL,
+	FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY (`music_id`) REFERENCES `music` (`music_id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+```
+
+  
+### 8. 관리자
+```sql
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE `admin` (
+	`admin_id`	int	PRIMARY KEY AUTO_INCREMENT,
+	`admin_name`	varchar(30)	NOT NULL,
+	`admin_email`	varchar(100)	NOT NULL UNIQUE,
+	`password`	varchar(30)	NOT NULL,
+	`phone_num`	varchar(20)	NOT NULL
+);
+```
+
+  
+### 9. 배급사
+```sql
+DROP TABLE IF EXISTS `album_distributor`;
+CREATE TABLE `album_distributor` (
+	`distributor_id`	int	PRIMARY KEY AUTO_INCREMENT,
+	`distributor_name`	varchar(30)	NOT NULL,
+	`distributor_email`	varchar(100)	NOT NULL	UNIQUE,
+	`password`	varchar(30)	NOT NULL,
+	`distributor_num`	varchar(20)	NOT NULL
+);
+```
+  
+
+### 10. 회원
+```sql
+CREATE TABLE `member` (
+	`member_id` bigint PRIMARY KEY AUTO_INCREMENT,
+	`member_name` varchar(20) NOT NULL,
+	`member_email` varchar(100) NOT NULL unique,
+	`password` varchar(30) NOT NULL,
+	`phonenum` varchar(20) NOT NULL unique,
+	`birthdate` date NOT NULL,
+	`gender` varchar(10) NOT NULL,
+	`payment_method_id` bigint NULL,
+	`member_profile_image_url` varchar(2083) NULL,
+	`membership` tinyint(1) NOT NULL DEFAULT 0,
+	`del_yn` tinyint(1) NOT NULL DEFAULT 0,
+	FOREIGN KEY (`payment_method_id`) REFERENCES `member_payment_method` (`payment_method_id`)
+);
+```
+
+  
+### 11. 아티스트
+```sql
+CREATE TABLE `artist` (
+	`artist_id` bigint PRIMARY KEY AUTO_INCREMENT,
+	`artist_name` varchar(30) NOT NULL,
+	`artist_profile_image_url` varchar(2083) NULL
+);
+```
+
+  
+### 12. 결제 수단
+```sql
+CREATE TABLE `member_payment_method` (
+	`payment_method_id` bigint PRIMARY KEY AUTO_INCREMENT,
+	`bank_name` enum('국민은행', '신한은행', '우리은행', '하나은행', '카카오뱅크') NOT NULL,
+	`account_number` varchar(30) NOT NULL unique,
+	`del_yn` tinyint(1) NOT NULL DEFAULT 0,
+	`member_id` bigint NOT NULL,
+	FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+```
+
+   
+### 13. 회원 - 결제 수단 교차 테이블
+```sql
+CREATE TABLE `member_payment_method` (
+	`payment_method_id` bigint PRIMARY KEY AUTO_INCREMENT,
+	`bank_name` enum('국민은행', '신한은행', '우리은행', '하나은행', '카카오뱅크') NOT NULL,
+	`account_number` varchar(30) NOT NULL unique,
+	`del_yn` tinyint(1) NOT NULL DEFAULT 0,
+	`member_id` bigint NOT NULL,
+	FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+```
+
+  
+### 14. 결제 이력
+```sql
+CREATE TABLE `member_payment_history` (
+	`payment_history_id`	bigint	PRIMARY KEY AUTO_INCREMENT,
+	`created_at`	timestamp	NOT NULL	DEFAULT CURRENT_TIMESTAMP,
+	`canceled_at`	timestamp	NULL,
+	`cancel_yn`	tinyint(1)	NOT NULL	DEFAULT 0,
+	`member_id`	bigint	NOT NULL,
+	`payment_method_id`	bigint	NOT NULL,
+    FOREIGN KEY (member_id) REFERENCES `member`(member_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (payment_method_id) REFERENCES member_payment_method(payment_method_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+```
+  
+
+### 15. 음원에 참여한 아티스트
+```sql
+CREATE TABLE music_artist (
+    music_artist_id    bigint    PRIMARY KEY AUTO_INCREMENT,
+    artist_type    enum('메인 아티스트', '작곡가', '작사가', '편곡자', '실연자')    NOT NULL,
+    music_id    bigint    NOT NULL,
+    artist_id    bigint    NOT NULL,
+    foreign key (music_id) references music(music_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    foreign key (artist_id) references artist(artist_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+```
+
+### 16. 인기 차트
+```sql
+CREATE TABLE `music_chart` (
+	`chart_id` bigint PRIMARY KEY AUTO_INCREMENT,
+	`music_id` bigint NOT NULL,
+	`rank` bigint NOT NULL,
+	FOREIGN KEY (`music_id`) REFERENCES `music` (`music_id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+```
 
 ---
 # 프로시저 실행 결과
