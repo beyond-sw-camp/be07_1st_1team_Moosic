@@ -41,7 +41,6 @@
         <td align="center">팀원: <a href="https://github.com/jiho3634">김지호</a></td>
         <td align="center">팀원: <a href="https://github.com/clean2001" >김세정</a></td>
       </tr>
-
     </table>
 </figure>
 <br>
