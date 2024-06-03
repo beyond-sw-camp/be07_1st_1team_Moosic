@@ -1,3 +1,4 @@
+drop database team1_moosic;
 create database team1_moosic;
 use team1_moosic;
 
