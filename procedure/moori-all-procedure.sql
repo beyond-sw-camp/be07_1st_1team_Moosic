@@ -14,7 +14,6 @@ DELIMITER ;
 
 --
 DELIMITER //
-
 CREATE PROCEDURE `멤버넣기`(
     IN m_member_name VARCHAR(20),
     IN m_member_email VARCHAR(100),
