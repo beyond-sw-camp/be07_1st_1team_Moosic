@@ -266,6 +266,10 @@ CALL team1_moosic.멤버넣기('김세리', 'seir@naver.com', '1234', '010-1221-
 
 ![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/b9ff8279-c305-40e6-bb50-3add5aa3173a)
 
+```sql
+call team1_moosic.멤버로그인('seir@naver.com', '1234');
+```
+
 ![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/773d7496-b877-4e98-9a65-c9b9749ebcaf)
 </div>
 </details>
@@ -277,6 +281,10 @@ CALL team1_moosic.멤버넣기('김세리', 'seir@naver.com', '1234', '010-1221-
 음원 데이터:
 
 ![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/68c2c915-2abd-43d1-b16b-67e24c2111fd)
+
+```sql
+call team1_moosic.음원검색('Song of Freedom');
+```
 
 ![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/9addabea-b1f9-4eee-8741-dc69fea1429f)
 
@@ -290,11 +298,87 @@ CALL team1_moosic.멤버넣기('김세리', 'seir@naver.com', '1234', '010-1221-
 
 ![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/37ccf13d-d301-4f23-9bf1-152eaafa9089)
 
+```sql
+call team1_moosic.결제정보등록('seir@naver.com', '1234', '국민은행', '942222--00-333444');
+```
+
 ![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/3fd6adc8-491e-462d-990a-143cde1c23ec)
 
 ![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/927ef383-752e-4276-a2b8-5ee9e4f2da48)
 
+</div>
+</details>
 
+
+<details>
+<summary><b>5. 구독하기</b></summary>
+<div markdown="1">
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/f3aecaf4-c73a-410c-9cb5-37e7e94312e9)
+
+```sql
+call team1_moosic.구독('seir@naver.com', '1234');
+```
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/4780a066-e1b6-4f71-ae6f-7f15194250d4)
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/fbb6c5a9-1fc4-45ab-a36a-8641abc153eb)
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/19f7fb68-d235-4a74-9b31-ed663221f2eb)
+
+</div>
+</details>
+
+<details>
+<summary><b>6. 플레이리스트 만들기</b></summary>
+<div markdown="1">
+	
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/e18357d2-37a5-4aa1-9e41-e188db91c6a0)
+
+```sql
+call team1_moosic.플레이리스트만들기(1, '내가 좋아하는 노래', null);
+```
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/771b28bd-89e9-4620-a968-4fa74900eea3)
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/b99c682f-6f1d-4e5e-82b4-2c314ec35119)
+
+
+</div>
+</details>
+
+
+<details>
+<summary><b>7. 플레이리스트에 음원 추가하기</b></summary>
+<div markdown="1">
+	
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/e0b4ad65-5dde-4997-bcb9-5722a80148a3)
+
+```sql
+call team1_moosic.플레이리스트에음원추가하기(1, 81);
+call team1_moosic.플레이리스트에음원추가하기(1, 82);
+call team1_moosic.플레이리스트에음원추가하기(1, 83);
+```
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/44c0b1a9-6de9-4399-80f0-f6a9c0dfdc6a)
+</div>
+</details>
+
+
+<details>
+<summary><b>8.플레이리스트에 들어있는 음원 조회하기</b></summary>
+<div markdown="1">
+	
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/c8f70c4e-b748-40f1-9d54-ecad99b1d683)
+
+```sql
+call team1_moosic.플레이리스트조회하기(1);
+```
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/6a8b5a05-812f-4df0-898f-767f78b05445)
+
+```sql
+select playtime as 재생수, like_count as "좋아요 수" from music where music_id = 81;
+```
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/71e749ff-ef7a-481c-9019-5ce5ea4aa5ed)
 
 
 </div>
