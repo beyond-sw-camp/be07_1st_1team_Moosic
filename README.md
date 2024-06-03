@@ -247,12 +247,62 @@ CREATE TABLE `music_chart` (
 ---
 # 💻 프로시저 실행 결과
 
-```sql
-CALL
-```
 
- 작성 예정입니다.
- 
+<details>
+<summary><b>1. 회원 가입</b></summary>
+<div markdown="1">
+
+```sql
+CALL team1_moosic.멤버넣기('김세리', 'seir@naver.com', '1234', '010-1221-2132', '00-01-01', 'Femail', null, null);
+```
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/fd60ccc0-cb53-4dd7-bfe2-f93a0463ea10)
+</div>
+</details>
+
+
+<details>
+<summary><b>2. 로그인</b></summary>
+<div markdown="1">
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/b9ff8279-c305-40e6-bb50-3add5aa3173a)
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/773d7496-b877-4e98-9a65-c9b9749ebcaf)
+</div>
+</details>
+
+
+<details>
+<summary><b>3. 음원 검색</b></summary>
+<div markdown="1">
+음원 데이터:
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/68c2c915-2abd-43d1-b16b-67e24c2111fd)
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/9addabea-b1f9-4eee-8741-dc69fea1429f)
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/311f5565-c28c-4bfa-87de-e55ae2b4b60c)
+</div>
+</details>
+
+<details>
+<summary><b>4. 결제 정보 등록</b></summary>
+<div markdown="1">
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/37ccf13d-d301-4f23-9bf1-152eaafa9089)
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/3fd6adc8-491e-462d-990a-143cde1c23ec)
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/927ef383-752e-4276-a2b8-5ee9e4f2da48)
+
+
+
+
+</div>
+</details>
+
+
+
+
 ---
 # 🤔 설계에 대한 고민
 - 작성 예정입니다.
