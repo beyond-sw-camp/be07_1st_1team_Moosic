@@ -2,29 +2,35 @@
 drop procedure 구독취소;
 DELIMITER //
 
-CREATE PROCEDURE 구독취소(
-    in m_member_email varchar(100),
-    in m_password varchar(30)
-)
+CREATE PROCEDURE refund(IN input_member_id BIGINT, out return_msg varchar(100))
 BEGIN
-    declare member_check int;
-    declare member_id_check int;
-    declare canc_yn int;
-    
-    select 1 into member_check from member where member_email = m_member_email and password = m_password;
-	select member_id into member_id_check from member where member_email = m_member_email and member_check = 1;
-    select cancel_yn into canc_yn from member_payment_history where member_id = member_id_check;
-    
-    if member_check = 1 then
-		if canc_yn = 0 then
-			update member_payment_history set cancel_yn = 1 where member_id = member_id_check;
-			update member_payment_history set canceled_at = now() where member_id = member_id_check;
-			select '구독 취소 완료';
-        end if;
-	else
-		select '계정 확인' as 결과;
-	end if;
+    DECLARE can_refund_exists INT;
+    DECLARE history_id bigint;
+
+	SELECT
+		payment_history_id
+        INTO history_id
+	FROM member_payment_history AS mph
+	WHERE mph.member_id = input_member_id and mph.cancel_yn = 0 AND datediff(CURRENT_DATE, mph.created_at) <= 3
+	ORDER BY mph.created_at desc
+    LIMIT 1;
+
+    -- 결과가 NULL이면 -1을 할당
+    IF history_id IS NULL THEN
+        set return_msg = "취소 가능한 내역이 없습니다.";
+    ELSE
+		UPDATE member_payment_history
+        SET canceled_at = sysdate()
+			,cancel_yn = 1
+		WHERE payment_history_id = history_id;
+        UPDATE member
+        SET membership = 0
+        WHERE member_id = input_member_id;
+		set return_msg = "구독 취소되었습니다.";
+    END IF;
 END //
 
 DELIMITER ;
+
 call 구독취소('bob2@example.com', 'password2');
+
