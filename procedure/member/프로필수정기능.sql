@@ -14,11 +14,9 @@ CREATE PROCEDURE 회원정보수정(
 BEGIN
 	declare login_check int;
     
-    -- 입력받은 이메일과 비밀번호가 artist 의 이메일과 비밀번호와 같다면 login_check 에 1을 넣는다.
     select 1 into login_check from member where password = m_password and member_email = m_member_email;
     
-    -- login_check 가 1이라면 로그인 성공 출력
-    -- 1이 아니라면 잘못된 로그인 정보입니다. 를 출력
+
     if login_check = 1 then
 		update member set password = m_c_password where m_c_password is not null and member_email = m_member_email;
         update member set phonenum = m_c_phonenum where m_c_phonenum is not null and member_email = m_member_email;
