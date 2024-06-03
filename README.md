@@ -503,13 +503,35 @@ call team1_moosic.관리자 넣기('최세호', 'seho@moosic.com', '1234', '010-
 <summary><b>15. 관리자가 회원들의 구독 현황, 횟수를 조회</b></summary>
 <div markdown="1">
 
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/e6a1a0ae-fa7e-46cb-8515-17036673ad94)
+
+```sql
+call team1_moosic.유저구독내역('seho@moosic.com', '1234');
+```
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/ef5e60ea-16bc-48d0-9bd8-9ff487e9ea51)
+
+</div>
+</details>
+
+<details>
+<summary><b>17. 배급사 로그인</b></summary>
+<div markdown="1">
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/7b551a38-67bc-4116-a92e-c85f09a2a68f)
+
+```sql
+call team1_moosic.배급사로그인('serimusic@naver.com', '1234');
+```
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/055d7a4f-88f6-4476-941c-1d2b7edf8180)
+
 
 </div>
 </details>
 
 
 <details>
-<summary><b>16. 인기 차트 조회</b></summary>
+<summary><b>18. 인기 차트 조회</b></summary>
 <div markdown="1">
 
 
@@ -517,7 +539,7 @@ call team1_moosic.관리자 넣기('최세호', 'seho@moosic.com', '1234', '010-
 </details>
 
 <details>
-<summary><b>17. 노래를 등록</b></summary>
+<summary><b>19. 노래를 등록</b></summary>
 <div markdown="1">
 
 
