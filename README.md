@@ -7,12 +7,6 @@
 # 🎵 프로젝트 개요
 작성 예정입니다.
 
----
-# 🎵 프로젝트 시나리오
-
-평소 음악에 관심이 많던 김세리씨는 음악 프로그램을 듣기위해 **moosic 어플**에 관심이 생겨 어플을 이용하기로 마음을 먹었다.
-
-김세리씨는 먼저 **moosic 어플**에서 **로그인**을 위해 **회원가입**을 진행하기로 하였다. **회원가입**을 한 김세리 씨는 **moosic 어플**에서 **로그인후** 음악을 듣기 위해 평소 듣고 싶었던 **음악을 검색**하였다. **음악을 검색**하고 원하던 음악을 감상하던 김세리씨는 음악을 1분밖에 들을수 없는 것올 보고 무엇이 문제인지 찾아보았다. **멤버쉽에 가입**을 하지 않으면 음악을 1분 밖에 들을수 없는 것을 알게된 김세리 씨는 먼저 **멤버쉽에 가입**을 하기 위해 **결제 정보를 등록**하기로 하였다. 자신의 **결제 정보**에 은행명과, 계좌번호를 입력하고 계좌 정보를 등록한 김세리 씨는 **moosic**에 가입을 하였고, 자신이 원하는 노래를 자신의 **플레이리스트**에 마음껏 넣고 이를 마음껏 들을 수 있었다. 노래를 듣던 김세리 씨는 문득 자신의 **플레이리스트**에 들어있는 노래들의 **재생 수**와 **좋아요 수**가 궁금해져서 찾아보게 되었다. 또한 **어떠한 아티스트 들이 내가 듣는 노래에 참가**를 하였는지 확인해 보기 위해 **노래에 대한 정보**를 보았다. 계속해서 노래를 듣던 김세리 씨는 프로듀서 였었던 경험을 떠올렸고, 그때의 행복했던 시절을 회상하며 자신도 노래를 등록해 보고자 **moosic**에 **배급사**로 등록을 하기로 하였다. 구독하고 3일이 지나지 않으면 취소와 환불이 가능하다는 것을 알게 된 김세리씨는 **취소와 환불**을 진행 후 자신의 회원 **아이디를 탈퇴하고**, 자신이 만든 노래를 등록하기 위해 **배급사로 회원가입**을 진행하였다. 다른 한편 오늘 막 취업을 한 최세호 씨는 자신의 관리자 계정을 얻기 위해 **관리자 계정 회원가입**을 진행하였고, 로그인을 하였는데 막 배급사 요청한 김세리 씨의 요청을 수락하였다(**급하게 오늘 떠올라서 가정으로 하겠습니다.ㅠㅠ**) 그리고 얼마나 많은 회원들이 멤버십 가입을 오래 했는지 궁금해진 최세호 씨는 **유저들의 정기 결제 내역**을 확인해 보았다. 한편 배급사 수락을 확인한 김세리 씨는 허가된 **아이디로 로그인** 하였다. 김세리 씨는 노래를 등록하기 전에 최근 음악 트렌드와 사람들이 싫어하는 노래를 조사하기 위해 **최근 인기차트**를 찾아보고 **노래를 등록**하였다.
 
 ---
 # ✨ 프로젝트 중점 사항
@@ -245,6 +239,37 @@ CREATE TABLE `music_chart` (
 ```
 
 ---
+
+# 🎵 프로젝트 시나리오
+
+평소 음악에 관심이 많던 김세리씨는 음악 프로그램을 듣기위해 **moosic 어플**에 관심이 생겨 어플을 이용하기로 마음을 먹었다.
+
+김세리씨는 먼저 **moosic 어플**에서 **로그인**을 위해 **회원가입**을 진행하기로 하였다.
+  
+**회원가입**을 한 김세리 씨는 **moosic 어플**에서 **로그인후** 음악을 듣기 위해 평소 듣고 싶었던 **음악을 검색**하였다.
+   
+**음악을 검색**하고 원하던 음악을 감상하던 김세리씨는 음악을 1분밖에 들을수 없는 것올 보고 무엇이 문제인지 찾아보았다.
+  
+**멤버쉽에 가입**을 하지 않으면 음악을 1분 밖에 들을수 없는 것을 알게된 김세리 씨는 먼저 **멤버쉽에 가입**을 하기 위해 **결제 정보를 등록**하기로 하였다.
+  
+자신의 **결제 정보**에 은행명과, 계좌번호를 입력하고 계좌 정보를 등록한 김세리 씨는 **moosic**에 가입을 하였고, 자신이 원하는 노래를 자신의 **플레이리스트**에 마음껏 넣고 이를 마음껏 들을 수 있었다.
+  
+노래를 듣던 김세리 씨는 문득 자신의 **플레이리스트**에 들어있는 노래들의 **재생 수**와 **좋아요 수**가 궁금해져서 찾아보게 되었다.
+  
+또한 **어떠한 아티스트 들이 내가 듣는 노래에 참가**를 하였는지 확인해 보기 위해 **노래에 대한 정보**를 보았다.
+  
+계속해서 노래를 듣던 김세리 씨는 프로듀서 였었던 경험을 떠올렸고, 그때의 행복했던 시절을 회상하며 자신도 노래를 등록해 보고자 **moosic**에 **배급사**로 등록을 하기로 하였다.
+  
+구독하고 3일이 지나지 않으면 취소와 환불이 가능하다는 것을 알게 된 김세리씨는 **취소와 환불**을 진행 후 자신의 회원 **아이디를 탈퇴하고**, 자신이 만든 노래를 등록하기 위해 **배급사로 회원가입**을 진행하였다.
+  
+다른 한편 오늘 막 취업을 한 최세호 씨는 자신의 관리자 계정을 얻기 위해 **관리자 계정 회원가입**을 진행하였고, 로그인을 하였는데 막 배급사 요청한 김세리 씨의 요청을 수락하였다(**급하게 오늘 떠올라서 가정으로 하겠습니다.ㅠㅠ**).
+  
+그리고 얼마나 많은 회원들이 멤버십 가입을 오래 했는지 궁금해진 최세호 씨는 **유저들의 정기 결제 내역**을 확인해 보았다. 한편 배급사 수락을 확인한 김세리 씨는 허가된 **아이디로 로그인** 하였다.
+  
+김세리 씨는 노래를 등록하기 전에 최근 음악 트렌드와 사람들이 싫어하는 노래를 조사하기 위해 **최근 인기차트**를 찾아보고 **노래를 등록**하였다.
+  
+---
+
 # 💻 프로시저 실행 결과
 
 
@@ -380,12 +405,115 @@ select playtime as 재생수, like_count as "좋아요 수" from music where mus
 
 ![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/71e749ff-ef7a-481c-9019-5ce5ea4aa5ed)
 
+</div>
+</details>
+
+
+<details>
+<summary><b>9. 듣고 있는 곡의 아티스트 조회하기</b></summary>
+<div markdown="1">
+	
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/c955518a-fc63-4e50-ad79-98a19e6b32c1)
+	
+```sql
+call team1_moosic.select_artist(81);
+```
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/ff8bbabe-a801-4855-a07b-2f76c30ffa51)
+</div>
+</details>
+
+
+<details>
+<summary><b>10. 구독 취소하고 환불 받기</b></summary>
+<div markdown="1">
+	
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/2651fac5-68e9-4732-ae3e-e51384a45d85)
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/080e1921-4f7e-4bcb-9a49-2ebe1d4725da)
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/2edb1cb6-b760-4143-8389-21b88f37a143)
 
 </div>
 </details>
 
 
+<details>
+<summary><b>11. 구독 취소하고 환불 받기</b></summary>
+<div markdown="1">
+	
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/2651fac5-68e9-4732-ae3e-e51384a45d85)
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/080e1921-4f7e-4bcb-9a49-2ebe1d4725da)
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/2edb1cb6-b760-4143-8389-21b88f37a143)
 
+</div>
+</details>
+
+
+<details>
+<summary><b>12. 회원 탈퇴</b></summary>
+<div markdown="1">
+	
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/79439edd-279e-4c3e-be41-ca48779a39c2)
+
+```sql
+call team1_moosic.회원탈퇴('seir@naver.com', '1234');
+```
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/3c3430e1-9da6-4647-bfd1-337d96c0a99f)
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/a814f016-a10f-49a2-9615-06280f9174b2)
+
+</div>
+</details>
+
+
+<details>
+<summary><b>13. 배급사 회원 가입</b></summary>
+<div markdown="1">
+	
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/593e72af-f184-44c6-8840-83f3224ccbe6)
+
+```sql
+call team1_moosic.배급사등록('김세리', 'serimusic@naver.com', '1234', '02-1234-1234');
+```
+
+</div>
+</details>
+
+
+<details>
+<summary><b>14. 관리자 회원 가입</b></summary>
+<div markdown="1">
+	
+```sql
+call team1_moosic.배급사등록('김세리', 'serimusic@naver.com', '1234', '02-1234-1234');
+call team1_moosic.관리자 넣기('최세호', 'seho@moosic.com', '1234', '010-1234-4443');
+```
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/91be5148-97c5-4dbe-8a83-75f7ae19d6a7)
+
+
+관리자가 배급사 "김세리" 씨의 회원가입 요청을 수락
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/178f3ef8-651d-45e6-ba26-4d430503d7f7)
+
+</div>
+</details>
+
+
+<details>
+<summary><b>15. 인기 차트 조회</b></summary>
+<div markdown="1">
+
+
+</div>
+</details>
+
+<details>
+<summary><b>16. 노래를 등록</b></summary>
+<div markdown="1">
+
+
+</div>
+</details>
 
 ---
 # 🤔 설계에 대한 고민
