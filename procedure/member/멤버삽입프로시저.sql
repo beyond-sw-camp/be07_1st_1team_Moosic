@@ -11,7 +11,7 @@ CREATE PROCEDURE `멤버넣기`(
     in m_member_profile_image_url varchar(2083)
 )
 BEGIN
-    INSERT INTO `member` (member_name, member_email, password, phonenum, birthdate, gender, account_id, member_profile_image_url)
+    INSERT INTO `member` (member_name, member_email, password, phonenum, birthdate, gender, payment_method_id, member_profile_image_url)
     VALUES (m_member_name, m_member_email, m_password, m_phone_num, m_birthday,m_gender,m_account_id,m_member_profile_image_url);
 END //
 
