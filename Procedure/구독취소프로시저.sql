@@ -24,7 +24,7 @@ BEGIN
         UPDATE member
         SET membership = 0
         WHERE member_id = input_member_id;
-		set return_msg = "결제가 취소되었습니다.";
+		set return_msg = "구독 취소되었습니다.";
     END IF;
 END //
 
