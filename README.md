@@ -500,7 +500,16 @@ call team1_moosic.관리자 넣기('최세호', 'seho@moosic.com', '1234', '010-
 
 
 <details>
-<summary><b>15. 인기 차트 조회</b></summary>
+<summary><b>15. 관리자가 회원들의 구독 현황, 횟수를 조회</b></summary>
+<div markdown="1">
+
+
+</div>
+</details>
+
+
+<details>
+<summary><b>16. 인기 차트 조회</b></summary>
 <div markdown="1">
 
 
@@ -508,7 +517,7 @@ call team1_moosic.관리자 넣기('최세호', 'seho@moosic.com', '1234', '010-
 </details>
 
 <details>
-<summary><b>16. 노래를 등록</b></summary>
+<summary><b>17. 노래를 등록</b></summary>
 <div markdown="1">
 
 
