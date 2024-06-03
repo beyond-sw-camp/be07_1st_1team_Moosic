@@ -286,9 +286,11 @@ CREATE TABLE `music_chart` (
 <details>
 <summary><b>1. 회원 가입</b></summary>
 <div markdown="1">
+	
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/4f67d59f-3674-4f59-9306-6bdd5203336e)
 
 ```sql
-CALL team1_moosic.멤버넣기('김세리', 'seir@naver.com', '1234', '010-1221-2132', '00-01-01', 'Femail', null, null);
+CALL team1_moosic.멤버넣기('김세리', 'seir@naver.com', '1234', '010-1221-2132', '00-01-01', 'Female', null, null);
 ```
 ![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/fd60ccc0-cb53-4dd7-bfe2-f93a0463ea10)
 </div>
