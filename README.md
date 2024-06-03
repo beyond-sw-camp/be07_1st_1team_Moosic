@@ -448,20 +448,9 @@ call team1_moosic.select_artist(81);
 </details>
 
 
-<details>
-<summary><b>11. 구독 취소하고 환불 받기</b></summary>
-<div markdown="1">
-	
-![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/2651fac5-68e9-4732-ae3e-e51384a45d85)
-![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/080e1921-4f7e-4bcb-9a49-2ebe1d4725da)
-![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/2edb1cb6-b760-4143-8389-21b88f37a143)
-
-</div>
-</details>
-
 
 <details>
-<summary><b>12. 회원 탈퇴</b></summary>
+<summary><b>11. 회원 탈퇴</b></summary>
 <div markdown="1">
 	
 ![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/79439edd-279e-4c3e-be41-ca48779a39c2)
@@ -479,7 +468,7 @@ call team1_moosic.회원탈퇴('seir@naver.com', '1234');
 
 
 <details>
-<summary><b>13. 배급사 회원 가입</b></summary>
+<summary><b>12. 배급사 회원 가입</b></summary>
 <div markdown="1">
 	
 ![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/593e72af-f184-44c6-8840-83f3224ccbe6)
@@ -493,7 +482,7 @@ call team1_moosic.배급사등록('김세리', 'serimusic@naver.com', '1234', '0
 
 
 <details>
-<summary><b>14. 관리자 회원 가입</b></summary>
+<summary><b>13. 관리자 회원 가입</b></summary>
 <div markdown="1">
 	
 ```sql
@@ -512,7 +501,7 @@ call team1_moosic.관리자 넣기('최세호', 'seho@moosic.com', '1234', '010-
 
 
 <details>
-<summary><b>15. 관리자가 회원들의 구독 현황, 횟수를 조회</b></summary>
+<summary><b>14. 관리자가 회원들의 구독 현황, 횟수를 조회</b></summary>
 <div markdown="1">
 
 ![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/e6a1a0ae-fa7e-46cb-8515-17036673ad94)
@@ -527,7 +516,7 @@ call team1_moosic.유저구독내역('seho@moosic.com', '1234');
 </details>
 
 <details>
-<summary><b>17. 배급사 로그인</b></summary>
+<summary><b>15. 배급사 로그인</b></summary>
 <div markdown="1">
 ![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/7b551a38-67bc-4116-a92e-c85f09a2a68f)
 
@@ -542,7 +531,7 @@ call team1_moosic.배급사로그인('serimusic@naver.com', '1234');
 
 
 <details>
-<summary><b>18. 인기 차트 조회</b></summary>
+<summary><b>16. 인기 차트 조회</b></summary>
 <div markdown="1">
 
  전체 장르(total)에서 탑 10 조회
