@@ -68,8 +68,9 @@ Moosic은 음원 스트리밍 서비스입니다.
 # 🧩 ERD
 
  [ERD 클라우드에서 보기](https://www.erdcloud.com/d/DPiPTZryaNWEzfLcM)
+ 
+![music-streaming-erd](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/a72d3657-f8e8-47fb-aa14-17f096ff3152)
 
-![moosic_erd](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/642d3a6d-4731-42fb-a321-53cedd2651b3)
 
 ---
 # 📑 Schema
