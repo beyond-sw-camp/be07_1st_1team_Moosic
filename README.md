@@ -21,6 +21,25 @@ Moosic은 음원 스트리밍 서비스입니다.
 좋아요, 싫어요 기능 - 등록 및 조회
 
 ---
+# 🍀 팀
+
+<figure>
+    <table>
+      <tr>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/90437809?v=4" width="180px"/></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/117874745?v=4" width="180px"/></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/64718002?v=4" width="180px"/></td>
+      </tr>
+      <tr>
+        <td align="center">팀장: <a href="https://github.com/Choi-Moori">최무리</a></td>
+        <td align="center">팀원: <a href="https://github.com/jiho3634">김지호</a></td>
+        <td align="center">팀원: <a href="https://github.com/clean2001" >김세정</a></td>
+      </tr>
+    </table>
+</figure>
+<br>
+
+---
 # ✨ 프로젝트 중점 사항
 
 - 많이 사용되는 음원 스트리밍 서비스의 기능을 꼼꼼히 분석하고 DB가 어떤 식으로 구성돼 있을지 생각해봄으로써, 서비스 설계에 대한 경험을 쌓고 이해도를 높이기 위해 노력했습니다.
@@ -593,21 +612,4 @@ call team1_moosic.select_popular_chart('total');
     - 그리고 아티스트도 ‘메인 아티스트’, ‘작곡가’, ‘작사가’, ‘편곡자’, ‘실연자’로 여러 분류로 나뉘어져 있어서 이 관계를 잘 표현하는 것이 중요했습니다.
     - 저희는 음원과 아티스트 사이에 ‘음원에 참여한 아티스트’ 테이블을 두고, 그곳에 음원 아이디, 아티스트 아이디, 아티스트 분류 컬럼을 두어 여러 아티스트와 여러 음원 사이의 관계를 표현할 수 있었습니다.
 
----
-# 🍀 팀
 
-<figure>
-    <table>
-      <tr>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/90437809?v=4" width="180px"/></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/117874745?v=4" width="180px"/></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/64718002?v=4" width="180px"/></td>
-      </tr>
-      <tr>
-        <td align="center">팀장: <a href="https://github.com/Choi-Moori">최무리</a></td>
-        <td align="center">팀원: <a href="https://github.com/jiho3634">김지호</a></td>
-        <td align="center">팀원: <a href="https://github.com/clean2001" >김세정</a></td>
-      </tr>
-    </table>
-</figure>
-<br>
