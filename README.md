@@ -27,6 +27,11 @@ Moosic은 음원 스트리밍 서비스입니다.
 - 음악 스트리밍 서비스에 존재하는 여러 `N:M`, `1:N` 관계를 해결하며 데이터베이스 설계에 대한 이해도를 높이기 위해 노력했습니다.
 
 ---
+# 📄 WBS
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/13d9cc44-a333-4c04-a601-53c6146c2c6b)
+
+---
 # 📝 요구사항 정의서
 
 [요구사항 정의서 노션에서 보기](https://clean01.notion.site/Moosic-ac9c31c3d0234ed5acb1b175acf572bd?pvs=4)
