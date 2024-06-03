@@ -170,6 +170,7 @@ CREATE TABLE `member` (
 	`member_profile_image_url` varchar(2083) NULL,
 	`membership` tinyint(1) NOT NULL DEFAULT 0,
 	`del_yn` tinyint(1) NOT NULL DEFAULT 0,
+	`regular_payment_date` tinyint(1),
 	FOREIGN KEY (`payment_method_id`) REFERENCES `member_payment_method` (`payment_method_id`)
 );
 
