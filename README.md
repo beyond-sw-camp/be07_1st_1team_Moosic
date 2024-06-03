@@ -525,7 +525,6 @@ call team1_moosic.배급사로그인('serimusic@naver.com', '1234');
 
 ![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/055d7a4f-88f6-4476-941c-1d2b7edf8180)
 
-
 </div>
 </details>
 
@@ -534,13 +533,42 @@ call team1_moosic.배급사로그인('serimusic@naver.com', '1234');
 <summary><b>18. 인기 차트 조회</b></summary>
 <div markdown="1">
 
+ 전체 장르(total)에서 탑 10 조회
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/f680ecca-4daf-43b1-968a-b2a592198b69)
+
+```sql
+call team1_moosic.select_popular_chart('total');
+```
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/8d96f4dc-d024-44c1-9fb7-5e9d3a501d94)
 
 </div>
 </details>
 
 <details>
-<summary><b>19. 노래를 등록</b></summary>
+<summary><b>19. 앨범 등록</b></summary>
 <div markdown="1">
+	
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/5a92c466-6142-47b8-80cd-ca46eaf1a5cd)
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/084e4a26-7732-4d9a-bf1c-7a103f8f6292)
+
+
+</div>
+</details>
+
+
+<details>
+<summary><b>20. 음원 등록</b></summary>
+<div markdown="1">
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/9ccd2e76-2528-4493-936c-4282ba82b74b)
+
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/24582eb1-247c-4023-9cea-7f444dcfc504)
+
+
+세리 1집 조회
+![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/ec65c5e6-655b-41d4-8f08-eedadf199ae4)
 
 
 </div>
