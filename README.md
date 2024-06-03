@@ -547,7 +547,7 @@ call team1_moosic.select_popular_chart('total');
 </details>
 
 <details>
-<summary><b>19. 앨범 등록</b></summary>
+<summary><b>17. 앨범 등록</b></summary>
 <div markdown="1">
 	
 ![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/5a92c466-6142-47b8-80cd-ca46eaf1a5cd)
@@ -560,7 +560,7 @@ call team1_moosic.select_popular_chart('total');
 
 
 <details>
-<summary><b>20. 음원 등록</b></summary>
+<summary><b>18. 음원 등록</b></summary>
 <div markdown="1">
 
 ![image](https://github.com/beyond-sw-camp/be07_1st_1team_Moosic/assets/64718002/9ccd2e76-2528-4493-936c-4282ba82b74b)
